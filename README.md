@@ -7,7 +7,8 @@ Heart disease is a leading cause of mortality worldwide. Predicting disease outc
 Can machine learning models accurately predict the presence of heart disease based on patient clinical data?
 
 ## Dataset
-- Source: [UCI Heart Disease Dataset](https://www.kaggle.com/ronitf/heart-disease-uci)
+- Source: Heart Disease UCI Dataset (Kaggle)  
+  https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data
 - Features: age, sex, cholesterol, blood pressure, etc.
 - Target: presence of heart disease
 
