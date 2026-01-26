@@ -1,7 +1,11 @@
 # Stroke Risk Prediction from Population Health Data Using Interpretable Machine Learning
 
 # Overview
-This project evaluates whether classical, interpretable machine learning models can predict stroke occurrence using routinely collected demographic and clinical variables from a population-level dataset.
+This project explores whether classical, interpretable machine learning models can be used to predict stroke occurrence using routinely collected demographic and clinical variables.
+
+The emphasis is placed on handling severe class imbalance, comparing balancing strategies, and maintaining interpretability suitable for biomedical and public health research contexts.
+
+Rather than developing a complex model, the project focuses on understanding trade-offs between sensitivity, specificity, and model transparency in an imbalanced clinical dataset.
 
 # Research Objective
 To quantify the discriminative performance of interpretable machine learning models for stroke risk prediction under severe class imbalance.
@@ -127,3 +131,9 @@ These findings are consistent with established clinical risk factors, supporting
 
 -No external validation cohort was used
 
+# Notes
+
+This project was developed as an exploratory study to build foundational skills in clinical risk modeling and model interpretation.
+
+Reported performance should be interpreted with caution due to dataset size, observational design, and the absence of temporal information.
+Interpretability analyses are used for model inspection and plausibility checks, not causal inference.
