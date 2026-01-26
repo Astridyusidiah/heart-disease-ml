@@ -25,27 +25,40 @@ The dataset is observational and reflects real-world class imbalance typical of 
 # Features
 
 -Age
+
 -Hypertension
+
 -Heart disease
+
 -Average glucose level
+
 -Body mass index (BMI)
+
 -Smoking status
+
 -Demographic and socioeconomic indicators
 
 # Methods
 Data Preprocessing
 
   -Removal of non-informative identifiers
+  
   -Median imputation for missing BMI values
+  
   -One-hot encoding of categorical variables
+  
   -Standardization of continuous features
+  
   -Stratified train–test split (70/30)
+  
   -Handling Class Imbalance
 
 Three strategies were evaluated:
 
   -Baseline training on the original imbalanced dataset
+  
   -Class-weighted logistic regression
+  
   -Synthetic Minority Oversampling Technique (SMOTE), applied only to training data
 
 Models
@@ -59,6 +72,7 @@ Used as a nonlinear comparator to assess performance trade-offs. Random Forest w
 # Evaluation
 
 -Primary metric: ROC-AUC
+
 -Secondary metrics: Precision, recall, F1-score
 
 Accuracy is reported but not emphasized due to class imbalance.
@@ -87,9 +101,13 @@ Global feature importance was examined using SHAP bar and beeswarm plots.
 The most influential predictors of stroke risk were:
 
 -Age
+
 -Average glucose level
+
 -Hypertension
+
 -Heart disease
+
 -Body mass index (BMI)
 
 These findings are consistent with established clinical risk factors, supporting the clinical plausibility of the model.
@@ -100,8 +118,12 @@ These findings are consistent with established clinical risk factors, supporting
 # Limitations
 
 -Single observational dataset
+
 -Moderate sample size
+
 -No temporal or longitudinal information
+
 -Synthetic oversampling may introduce distributional artifacts
+
 -No external validation cohort was used
 
