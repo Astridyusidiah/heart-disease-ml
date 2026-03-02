@@ -28,56 +28,56 @@ The dataset is observational and reflects real-world class imbalance typical of 
 
 # Features
 
--Age
+- Age
 
--Hypertension
+- Hypertension
 
--Heart disease
+- Heart disease
 
--Average glucose level
+- Average glucose level
 
--Body mass index (BMI)
+- Body mass index (BMI)
 
--Smoking status
+- Smoking status
 
--Demographic and socioeconomic indicators
+- Demographic and socioeconomic indicators
 
 # Methods
-Data Preprocessing
+- Data Preprocessing
 
-  -Removal of non-informative identifiers
+  - Removal of non-informative identifiers
   
-  -Median imputation for missing BMI values
+  - Median imputation for missing BMI values
   
-  -One-hot encoding of categorical variables
+  - One-hot encoding of categorical variables
   
-  -Standardization of continuous features
+  - Standardization of continuous features
   
-  -Stratified train–test split (70/30)
+  - Stratified train–test split (70/30)
   
-  -Handling Class Imbalance
+  - Handling Class Imbalance
 
-Three strategies were evaluated:
+- Three strategies were evaluated:
 
-  -Baseline training on the original imbalanced dataset
+  - Baseline training on the original imbalanced dataset
   
-  -Class-weighted logistic regression
+  - Class-weighted logistic regression
   
-  -Synthetic Minority Oversampling Technique (SMOTE), applied only to training data
+  - Synthetic Minority Oversampling Technique (SMOTE), applied only to training data
 
 Models
 
--Logistic Regression
+- Logistic Regression
 Logistic Regression was used as the primary model due to its interpretability and well-calibrated probabilistic outputs.
 
--Random Forest
+- Random Forest
 Used as a nonlinear comparator to assess performance trade-offs. Random Forest was included as a nonlinear comparator to assess performance trade-offs relative to interpretable linear models.
 
 # Evaluation
 
--Primary metric: ROC-AUC
+- Primary metric: ROC-AUC
 
--Secondary metrics: Precision, recall, F1-score
+- Secondary metrics: Precision, recall, F1-score
 
 Accuracy is reported but not emphasized due to class imbalance.
 
@@ -92,11 +92,11 @@ Accuracy is reported but not emphasized due to class imbalance.
 
 # Key findings:
 
-Logistic Regression achieved substantially higher sensitivity to stroke cases.
+- Logistic Regression achieved substantially higher sensitivity to stroke cases.
 
-Random Forest attained higher overall accuracy but failed to identify most minority-class events.
+- Random Forest attained higher overall accuracy but failed to identify most minority-class events.
 
-Accuracy alone is misleading in imbalanced clinical datasets.
+- Accuracy alone is misleading in imbalanced clinical datasets.
 
 # Model Interpretability
 
@@ -104,15 +104,15 @@ Global feature importance was examined using SHAP bar and beeswarm plots.
 
 The most influential predictors of stroke risk were:
 
--Age
+- Age
 
--Average glucose level
+- Average glucose level
 
--Hypertension
+- Hypertension
 
--Heart disease
+- Heart disease
 
--Body mass index (BMI)
+- Body mass index (BMI)
 
 These findings are consistent with established clinical risk factors, supporting the clinical plausibility of the model.
 
@@ -121,15 +121,15 @@ These findings are consistent with established clinical risk factors, supporting
 
 # Limitations
 
--Single observational dataset
+- Single observational dataset
 
--Moderate sample size
+- Moderate sample size
 
--No temporal or longitudinal information
+- No temporal or longitudinal information
 
--Synthetic oversampling may introduce distributional artifacts
+- Synthetic oversampling may introduce distributional artifacts
 
--No external validation cohort was used
+- No external validation cohort was used
 
 # Notes
 
